@@ -1,0 +1,60 @@
+#orders {
+    padding: var(--space-6);
+    background-color: var(--white);
+    border-bottom-right-radius: var(--radius-md);
+    border-bottom-left-radius: var(--radius-md);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    padding: var(--space-3) 0;
+    border-bottom: 2px solid var(--gray-100);
+    font-size: .875rem;
+    color: var(--gray-500);
+}
+
+td {
+    padding: var(--space-2) 0;
+    font-size:1rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.icon-edit {
+    background-color: var(--blue-500);
+    padding: var(--space-1);
+    border-radius: var(--radius-md);
+}
+
+.loading {
+    width: 100%;
+    padding: var(--space-8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+}
+
+.loading > span {
+    color: var(--blue-500);
+}
+
+@keyframes loading {
+    0% {rotate: 0deg;}
+    100% {rotate: 360deg;}
+}
+
+
+.loading-image {
+    animation-name: loading;
+    animation-duration: 1.5s;
+    animation-delay: initial;
+    animation-iteration-count: infinite;
+
+    width: clamp(45px ,5%, 72px);
+}
