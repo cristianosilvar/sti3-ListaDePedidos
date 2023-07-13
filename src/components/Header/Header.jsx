@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header>
         <div>
-          <img src={Logo}/>  
+          <img src={Logo} alt='Logotipo da STI3'/>  
           <div className='divider'></div>
           <h2 className='fw-medium'>Feito por Cris Silva</h2>
         </div>

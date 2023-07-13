@@ -1,6 +1,18 @@
+import useBestSellers from '../../hooks/useBestSellers'
 import './style/BestSellers.css'
 
-export default function BestSellers() {
+export default function BestSellers({orders, loading, error}) {
+
+
+    const {ids} = useBestSellers(orders)
+
+    console.log(ids)
+       
+
+
+
+
+
     return (
         <div id="best-sellers">
             <div className="card card-yellow text-center">

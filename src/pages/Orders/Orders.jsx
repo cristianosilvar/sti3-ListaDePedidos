@@ -12,10 +12,8 @@ import { Link } from 'react-router-dom'
 // hook
 import { useFetch } from '../../hooks/useFetch' 
 
-export default function Orders() {
-    const url = 'https://desafiotecnicosti3.azurewebsites.net/pedido'
-    const {data: orders, loading, error} = useFetch(url)
-    
+export default function Orders({orders, loading, error}) {
+    /* console.log(orders) */
     return (
         <div id='orders'>
             <table>
