@@ -6,7 +6,7 @@ export default function BestSellers({orders, loading, error}) {
 
     const {ids} = useBestSellers(orders)
 
-    console.log(ids)
+    /* console.log(ids) */
        
 
 
