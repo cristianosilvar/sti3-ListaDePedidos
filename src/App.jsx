@@ -2,12 +2,12 @@ import './App.css';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Home from './pages/Home'
-import BestSellers from './pages/BestSellers'
-import Orders from './pages/Orders'
-import NotFound from './pages/NotFound';
+import Home from './pages/Home/Home'
+import BestSellers from './pages/BestSellers/BestSellers'
+import Orders from './pages/Orders/Orders'
+import NotFound from './pages/NotFound/NotFound';
 
-import Header from './components/Header';
+import Header from './components/Header/Header';
 
 function App() {
   return (

@@ -1,7 +1,9 @@
-import './Home.css'
+import './style/Home.css'
 
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
+
+import useDate from '../../hooks/useDate'
 
 export default function Home({children}) {
     const [page,setPage] = useState('orders')

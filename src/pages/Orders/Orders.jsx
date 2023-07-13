@@ -1,16 +1,16 @@
-import './Orders.css'
+import './style/Orders.css'
 
 // assets
-import iconApproved from '../assets/icon-approved.svg'
-import iconCancel from '../assets/icon-cancel.svg'
-import iconEdit from '../assets/icon-edit.svg'
-import spinner from '../assets/spinner.svg'
+import iconApproved from '../../assets/icon-approved.svg'
+import iconCancel from '../../assets/icon-cancel.svg'
+import iconEdit from '../../assets/icon-edit.svg'
+import spinner from '../../assets/spinner.svg'
 
 // react router
 import { Link } from 'react-router-dom'
 
 // hook
-import { useFetch } from '../hooks/useFetch' 
+import { useFetch } from '../../hooks/useFetch' 
 
 export default function Orders() {
     const url = 'https://desafiotecnicosti3.azurewebsites.net/pedido'
@@ -56,13 +56,13 @@ export default function Orders() {
                 }
                 </tbody>
             </table>
-                {error && <h5>{error}</h5>}
-                {loading &&
-                    <div className="loading">    
-                        <img src={spinner} alt="Carregando dados..." className='loading-image'/>
-                        <span className='h6'>Carregando</span>
-                    </div>
-                }
+            {error && <h5>{error}</h5>}
+            {loading &&
+                <div className="loading">    
+                    <img src={spinner} alt="Carregando dados..." className='loading-image'/>
+                    <span className='h6'>Carregando</span>
+                </div>
+            }
         </div>
     )
 }

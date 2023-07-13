@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    /* Variáveis - CSS*/
+
+    /* Cores */
 
     --black: #000;
     --white: #fff;
@@ -20,11 +21,14 @@
     --orange-100: #feebc8;
     --orange-900: #652b19;
 
+    /* Sombra */
     --shadow-md: 0 4px 6px -1 rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
-
+    
+    /* Border Radius */
     --radius-sm: .25rem;
     --radius-md: .375rem;
 
+    /* Espaços */
     --space-1: .25rem;
     --space-2: .5rem;
     --space-3: .75rem;

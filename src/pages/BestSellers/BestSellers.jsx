@@ -1,4 +1,4 @@
-import './BestSellers.css'
+import './style/BestSellers.css'
 
 export default function BestSellers() {
     return (

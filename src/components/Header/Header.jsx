@@ -1,8 +1,16 @@
-import './Header.css'
+// Styles
+import './style/Header.css'
 
-import Logo from '../assets/sti3-logo.svg'
+// Assets
+import Logo from '../../assets/sti3-logo.svg'
+
+// Hooks
+import useDate from '../../hooks/useDate'
 
 export default function Header() {
+
+  const {day, dayWeek, mounth} = useDate()
+  
   return (
     <header>
         <div>
@@ -11,7 +19,7 @@ export default function Header() {
           <h2 className='fw-medium'>Feito por Cris Silva</h2>
         </div>
         <div>
-          <h2 className='fw-medium'>Quin, 16 Fevereiro</h2>
+          <h2 className='fw-medium'>{dayWeek}, {day} {mounth}</h2>
         </div>
     </header>
   )
