@@ -32,6 +32,8 @@ export default function useProducts(orders) {
                         produto = {
                             "id": idProduto,
                             "nome": item.nome,
+                            "valorUnitario": item.valorUnitario,
+                            "valorTotal": item.valorUnitario * quantidadeTotal[quantidadeTotal.length - 1],
                             "quantidade": quantidadeTotal[quantidadeTotal.length - 1]
                         }
                         

@@ -2,7 +2,7 @@
 
 :root {
 
-    /* Cores */
+    /* Colors */
 
     --black: #000;
     --white: #fff;
@@ -21,14 +21,14 @@
     --orange-100: #feebc8;
     --orange-900: #652b19;
 
-    /* Sombra */
+    /* Shadow */
     --shadow-md: 0 4px 6px -1 rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
     
     /* Border Radius */
     --radius-sm: .25rem;
     --radius-md: .375rem;
 
-    /* Espaços */
+    /* Spaces */
     --space-1: .25rem;
     --space-2: .5rem;
     --space-3: .75rem;
@@ -67,3 +67,12 @@ h6, .h6 {font-size: .625rem;}
 .text-left {text-align: left;}
 .text-center {text-align: center;}
 .text-right {text-align: right;}
+
+
+/*  */
+
+.App {
+    width: clamp(400px, 96%, 1440px);
+    margin-inline: auto;
+    /* padding: 0 var(--space-6); */
+}

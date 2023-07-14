@@ -1,6 +1,7 @@
-import './App.css';
+import './style/App.css';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useState } from 'react';
 
 import { useFetch } from './hooks/useFetch';
 
@@ -10,7 +11,6 @@ import Orders from './pages/Orders/Orders'
 import NotFound from './pages/NotFound/NotFound';
 
 import Header from './components/Header/Header';
-import { useState } from 'react';
 
 function App() {
   const url = 'https://desafiotecnicosti3.azurewebsites.net/pedido'

@@ -1,5 +1,0 @@
-.App {
-    width: clamp(400px, 96%, 1440px);
-    margin-inline: auto;
-    /* padding: 0 var(--space-6); */
-}
