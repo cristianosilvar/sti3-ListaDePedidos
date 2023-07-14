@@ -26,12 +26,12 @@ export default function Home({children}) {
                 <div className='navBar'>
                     <NavLink 
                     to='/' 
-                    className='navBar-orders'
+                    className='active'
                     onClick={() => setPage('orders')}
                     >Pedidos</NavLink>
                     <NavLink 
                     to='/' 
-                    className='navBar-bestSellers'
+                    className={({page}) => (page == 'best-sellers'  ? 'active' : '')}
                     onClick={() => setPage('best-sellers')}
                     >Produtos mais vendidos</NavLink>
                 </div>
@@ -50,12 +50,12 @@ export default function Home({children}) {
                 <div className='navBar'>
                     <NavLink 
                     to='/' 
-                    className='navBar-orders'
+                    className={({page}) => (page == 'orders' ? 'active' : '')}
                     onClick={() => setPage('orders')}
                     >Pedidos</NavLink>
                     <NavLink 
                     to='/' 
-                    className='navBar-bestSellers'
+                    className='active'
                     onClick={() => setPage('best-sellers')}
                     >Produtos mais vendidos</NavLink>
                 </div>
