@@ -15,8 +15,6 @@ export default function Order() {
     const {orders, loading, error} = useOrdersValue()
 
     const { id } = useParams()
-
-
     
     function retornOrder (value){
         if (value.id == id)
@@ -28,11 +26,10 @@ export default function Order() {
         var order = orderArray[0]
         
     }
+    
     const [name, setName] = useState(order ? order.cliente.nome : '')
     const [email, setEmail] = useState(order ? order.cliente.email : '')
     const [cpf, setCpf] = useState(order ? order.cliente.cpf : '')
-
-    console.log(name)
     
     // data formatação
 
@@ -52,8 +49,6 @@ export default function Order() {
 
         return formatedValue
     }
-
-
 
     const handleCancel = () => {
 
