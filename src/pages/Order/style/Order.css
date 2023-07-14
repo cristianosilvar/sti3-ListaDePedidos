@@ -91,3 +91,26 @@ input {
     opacity: .5;
 }
 
+.sucess {
+    position: absolute;
+    z-index: 1;
+    right: 20px;
+    bottom: 20px;
+
+    color: var(--white);
+    background-color: var(--green-500);
+    width: clamp(450px, 34%, 800px);
+    padding: var(--space-4) 0;
+
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.sucess > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

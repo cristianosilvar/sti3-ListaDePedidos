@@ -1,9 +1,12 @@
 import './style/Home.css'
 
-import { NavLink } from 'react-router-dom'
+import { BrowserRouter, Routes, NavLink, Route, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
 import useDate from '../../hooks/useDate'
+import Orders from '../Orders/Orders'
+import BestSellers from '../BestSellers/BestSellers'
+import { useOrdersValue } from '../../context/OrdersContext'
 
 export default function Home({children}) {
     const [page,setPage] = useState('orders')
@@ -12,25 +15,14 @@ export default function Home({children}) {
         <section>
         {
             page === 'orders' && 
-            <div className='top'>   
-                <div>
-                    <h1>Listagem de pedidos</h1>
-                    <h3 className='fw-normal'>Aqui você poderá visualizar todos os pedidos emitidos.</h3>
+            <>
+                <div className='top'>   
+                    <div>
+                        <h1>Listagem de pedidos</h1>
+                        <h3 className='fw-normal'>Aqui você poderá visualizar todos os pedidos emitidos.</h3>
+                    </div>
+                    <button className='button-consult fw-medium'>Consultar</button>
                 </div>
-                <button className='button-consult fw-medium'>Consultar</button>
-            </div>
-        }
-        {
-            page === 'best-sellers' &&  
-            <div className='top'>  
-                <div>
-                    <h1>Produtos mais vendidos</h1>
-                    <h3 className='fw-normal'>Aqui você poderá observar um ranking com os produtos mais vendidos</h3>
-                </div>
-                <button className='button-consult fw-medium'>Consultar</button>
-            </div>
-        }
-            <div>
                 <div className='navBar'>
                     <NavLink 
                     to='/' 
@@ -38,13 +30,49 @@ export default function Home({children}) {
                     onClick={() => setPage('orders')}
                     >Pedidos</NavLink>
                     <NavLink 
-                    to='/best-sellers' 
+                    to='/' 
                     className='navBar-bestSellers'
                     onClick={() => setPage('best-sellers')}
                     >Produtos mais vendidos</NavLink>
                 </div>
-                {children}
-            </div>
+                <Orders/>
+            </>
+        }
+        {
+            page === 'best-sellers' &&  
+            <>
+                <div className='top'>  
+                    <div>
+                        <h1>Produtos mais vendidos</h1>
+                        <h3 className='fw-normal'>Aqui você poderá observar um ranking com os produtos mais vendidos</h3>
+                    </div>
+                </div>
+                <div className='navBar'>
+                    <NavLink 
+                    to='/' 
+                    className='navBar-orders'
+                    onClick={() => setPage('orders')}
+                    >Pedidos</NavLink>
+                    <NavLink 
+                    to='/' 
+                    className='navBar-bestSellers'
+                    onClick={() => setPage('best-sellers')}
+                    >Produtos mais vendidos</NavLink>
+                </div>
+                <BestSellers/>
+            </>
+        }
+                {/* <BrowserRouter>
+                    <Routes>
+                        <Route path='/home/orders' element={<Orders/>}/>
+                        <Route path='/home/best-sellers' element={<BestSellers/>}/>
+                    </Routes>
+                </BrowserRouter> */}
+                
+                
+                
+                {/* 
+                {children} */}
         </section>
     )
 }
