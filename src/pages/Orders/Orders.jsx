@@ -1,15 +1,15 @@
 import './style/Orders.css'
 
-// assets
+// Assets
 import iconApproved from '../../assets/icon-approved.svg'
 import iconCancel from '../../assets/icon-cancel.svg'
 import iconEdit from '../../assets/icon-edit.svg'
 import spinner from '../../assets/spinner.svg'
 
-// react router
+// React router
 import { Link } from 'react-router-dom'
 
-// hook
+// Hook
 import { useFetch } from '../../hooks/useFetch' 
 
 export default function Orders({orders, loading, error}) {
