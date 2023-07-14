@@ -11,25 +11,28 @@ import Orders from './pages/Orders/Orders'
 import NotFound from './pages/NotFound/NotFound';
 
 import Header from './components/Header/Header';
+import { OrdersProvider } from './context/OrdersContext';
 
 function App() {
   const url = 'https://desafiotecnicosti3.azurewebsites.net/pedido'
   const {data: orders, loading, error} = useFetch(url)
 
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Header/>
-          <Home>
-            <Routes>
-              <Route path='/' element={<Orders orders={orders} loading={loading} error={error}/>} />
-              <Route path='/best-sellers' element={<BestSellers orders={orders} loading={loading} error={error}/>} />
-              <Route path='/*' element={<NotFound/>} />
-              {/* <Route path='/orders/:id' element={<Order/>}/> */}
-            </Routes>
-          </Home>
-      </BrowserRouter>
-    </div>
+    <OrdersProvider value={{orders, loading, error}}>
+      <div className="App">
+        <BrowserRouter>
+          <Header/>
+            <Home>
+              <Routes>
+                <Route path='/' element={<Orders orders={orders} loading={loading} error={error}/>} />
+                <Route path='/best-sellers' element={<BestSellers/>} />
+                <Route path='/*' element={<NotFound/>} />
+                {/* <Route path='/orders/:id' element={<Order/>}/> */}
+              </Routes>
+            </Home>
+        </BrowserRouter>
+      </div>
+    </OrdersProvider>
   );
 }
 
