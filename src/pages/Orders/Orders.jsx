@@ -11,9 +11,11 @@ import { Link } from 'react-router-dom'
 
 // Hook
 import { useFetch } from '../../hooks/useFetch' 
+import { useOrdersValue } from '../../context/OrdersContext'
 
-export default function Orders({orders, loading, error}) {
-    /* console.log(orders) */
+export default function Orders() {
+    const {orders, loading, error} = useOrdersValue()
+    
     return (
         <div id='orders'>
             <table>

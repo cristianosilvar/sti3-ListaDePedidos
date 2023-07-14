@@ -8,6 +8,7 @@ import { useFetch } from './hooks/useFetch';
 import Home from './pages/Home/Home'
 import BestSellers from './pages/BestSellers/BestSellers'
 import Orders from './pages/Orders/Orders'
+import Order from './pages/Order/Order'
 import NotFound from './pages/NotFound/NotFound';
 
 import Header from './components/Header/Header';
@@ -24,10 +25,10 @@ function App() {
           <Header/>
             <Home>
               <Routes>
-                <Route path='/' element={<Orders orders={orders} loading={loading} error={error}/>} />
+                <Route path='/' element={<Orders/>} />
                 <Route path='/best-sellers' element={<BestSellers/>} />
+                <Route path='/orders/:id' element={<Order/>}/>
                 <Route path='/*' element={<NotFound/>} />
-                {/* <Route path='/orders/:id' element={<Order/>}/> */}
               </Routes>
             </Home>
         </BrowserRouter>

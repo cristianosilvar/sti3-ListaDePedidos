@@ -1,0 +1,93 @@
+main, .error {
+    background-color: var(--white);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.loading-over {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+}
+
+.loading-over > span {
+    color: var(--blue-500);
+}
+
+main > .info {
+    width: clamp(250px, 50%, 720px);
+}
+
+main > div > h2 {
+    margin-bottom: var(--space-6);
+}
+
+main > div > div {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-2);
+}
+
+main > div > div > .h4, label > span  {
+    color: var(--gray-700);
+}
+
+main > div > .last {
+    margin-top: var(--space-8);
+    display: flex;
+}
+
+input {
+    font-family: var(--lexend);
+    display: block;
+    width: 50%;
+    font-size: .875rem;
+    font-weight: 500;
+    padding: var(--space-3);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    margin: var(--space-1) 0 var(--space-4) 0;
+} input:focus {
+    outline: none;
+    border-color: var(--gray-500);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+}
+
+.button-save {
+    font-size: 1.125rem;
+    color: var(--white);
+    background-color: var(--green-500);
+    border: 1px solid var(--green-500);
+    border-radius: var(--radius-sm);
+    padding: var(--space-3) var(--space-6);
+    cursor: pointer;
+    transition: ease-in .1s;
+}
+
+.button-cancel {
+    font-size: 1.125rem;
+    color: var(--red-500);
+    background-color: var(--transparent);
+    border: 1px solid var(--red-500);
+    border-radius: var(--radius-sm);
+    padding: var(--space-3) var(--space-6);
+    cursor: pointer;
+    transition: ease-in .1s;
+}
+
+.buttons:hover > button:not(:hover), button:disabled {
+    opacity: .5;
+}
+
