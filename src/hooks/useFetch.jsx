@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 
-export const useFetch = (url) =>{
+export const useFetch = (reload, setReload) => {
+    const url = 'https://desafiotecnicosti3.azurewebsites.net/pedido'
+
     const [data, setData] = useState(null)
 
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
+
 
     useEffect(() => {
 
@@ -23,10 +26,10 @@ export const useFetch = (url) =>{
             }
         }
 
+        setReload(false)
         fetchData()
 
-    }, [url])
+    }, [url, reload])
 
     return {data, loading, error}
 }
-

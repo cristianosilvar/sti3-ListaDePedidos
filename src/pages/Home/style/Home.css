@@ -2,6 +2,8 @@ section {
     background-color: var(--gray-100);
     padding: var(--space-6);
     border-radius: var(--radius-md);
+
+    margin-bottom: var(--space-6);
 }
 
 .top {

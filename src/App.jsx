@@ -15,11 +15,8 @@ import Header from './components/Header/Header';
 import { OrdersProvider } from './context/OrdersContext';
 
 function App() {
-  const url = 'https://desafiotecnicosti3.azurewebsites.net/pedido'
-  const {data: orders, loading, error} = useFetch(url)
-
   return (
-    <OrdersProvider value={{orders, loading, error}}>
+    <OrdersProvider/*  value={{orders, loading, error}} */>
       <div className="App">
         <Header/>
         <BrowserRouter>
