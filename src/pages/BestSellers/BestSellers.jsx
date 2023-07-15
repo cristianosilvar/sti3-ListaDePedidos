@@ -23,6 +23,8 @@ export default function BestSellers() {
     const top1 = produtos[0]
     const top2 = produtos[1]
     const top3 = produtos[2]
+    const top4 = produtos[3]
+    const top5 = produtos[4]
 
 
     return (
@@ -47,6 +49,18 @@ export default function BestSellers() {
                         <span className='h3'>{top3.nome}</span>
                         <span className='h5'>Vendido {top3.quantidade} vezes</span>
                         <span className='h5'>Resultou em R$ {parseFloat(top3.valorTotal).toFixed(2).replace('.',',')}</span>
+                    </div>
+                    <div className="card card-gray text-center">
+                        <span className='h2 fw-normal'>4º</span>
+                        <span className='h3'>{top4.nome}</span>
+                        <span className='h5'>Vendido {top4.quantidade} vezes</span>
+                        <span className='h5'>Resultou em R$ {parseFloat(top4.valorTotal).toFixed(2).replace('.',',')}</span>
+                    </div>
+                    <div className="card card-gray text-center">
+                        <span className='h2 fw-normal'>5º</span>
+                        <span className='h3'>{top5.nome}</span>
+                        <span className='h5'>Vendido {top5.quantidade} vezes</span>
+                        <span className='h5'>Resultou em R$ {parseFloat(top5.valorTotal).toFixed(2).replace('.',',')}</span>
                     </div>
                 </>
             }

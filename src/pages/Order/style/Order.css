@@ -99,13 +99,12 @@ input {
 
     color: var(--white);
     background-color: var(--green-500);
-    width: clamp(450px, 34%, 800px);
     padding: var(--space-4) 0;
-
-    display: none;
+    
+    display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
+
+    width: clamp(350px, 25%, 600px);
 }
 
 .sucess > div {

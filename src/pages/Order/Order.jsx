@@ -208,8 +208,8 @@ export default function Order() {
                             </svg>
                         </figure>
                         <div>
-                            <span className='fw-medium'>Alterado com sucesso!</span>
-                            <span className='fw-normal'>As informações do cliente foram atualizadas.</span>
+                            <span className='fw-medium h3'>Alterado com sucesso!</span>
+                            <span className='fw-normal h3'>As informações do cliente foram atualizadas.</span>
                         </div>
                         <figure onClick={() => setAlertIsActived(false)}>
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">

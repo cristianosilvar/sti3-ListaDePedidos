@@ -4,6 +4,7 @@ section {
     border-radius: var(--radius-md);
 
     margin-bottom: var(--space-6);
+    box-shadow: var(--shadow-md);
 }
 
 .top {
