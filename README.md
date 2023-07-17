@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Projeto Front End - STI3
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Inicie o projeto no modo desenvolvedor
+Abra o terminal no VS Code e execute os seguintes comandos:
 
-## Available Scripts
+### Para baixar as dependências:
+### `npm install`
 
-In the project directory, you can run:
-
+### Executar o projeto:
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Ele será aberto em [http://localhost:3000](http://localhost:3000) no seu navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Design 
 
-### `npm test`
+### Mockup
+<a href='https://www.figma.com/file/6c9wUdLp7Q890n4SrXJtiG/Desafio-STi3-Front-end?type=design&mode=design&t=LUur0tpTvqSE7QvX-0'>Veja o design no Figma</a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Telas
 
-### `npm run build`
+![image](https://github.com/cristianosilvar/sti3-ListaDePedidos/assets/94191704/179b4296-4f90-4d16-8e13-e5f6be27f6ae)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![image](https://github.com/cristianosilvar/sti3-ListaDePedidos/assets/94191704/69eac194-6403-401c-86ee-4d2d677e0721)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](https://github.com/cristianosilvar/sti3-ListaDePedidos/assets/94191704/c16999a5-a6b6-4ee1-ba3b-713274884d8c)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![image](https://github.com/cristianosilvar/sti3-ListaDePedidos/assets/94191704/db9ae8dc-81d8-419c-8e16-708bfde1427d)
 
-### `npm run eject`
+### Gravação
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![video_projeto_sti3](https://github.com/cristianosilvar/sti3-ListaDePedidos/assets/94191704/ff72c702-3dca-4cbe-9561-72709a5eb360)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
