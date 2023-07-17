@@ -68,8 +68,8 @@ export default function BestSellers() {
                     <div className="type">
                         <h4 className='fw-normal'>Classificar Por:  </h4>
                         <select name="" id="select_type" className='select_type' onChange={() => setType(document.getElementById('select_type').value)}>
-                            <option value="value">Valor Total</option>
                             <option value="quantity">Quantidade Vendida</option>
+                            <option value="value">Valor Total</option>
                         </select>
                     </div>
                     <div className="cards">    

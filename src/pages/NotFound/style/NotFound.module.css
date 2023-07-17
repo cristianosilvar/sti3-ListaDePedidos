@@ -9,3 +9,9 @@
 
     margin-inline: auto;
 }
+
+.link {
+    color: var(--blue-500);
+    text-decoration: underline;
+    text-align: center;
+}
