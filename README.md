@@ -5,7 +5,7 @@
 • O projeto consiste em uma aplicação que consome uma API e o retorno será uma lista de pedidos. <br><br>
 • Na tela principal é exibido os dados sobre os pedidos, como: status, nome do cliente, valores e a opção de alterar alguns desses dados. <br><br>
 • Na tela 'Produtos Mais Vendidos' por sua vez é exibido a classificação de cada produto em uma colocação do 1º até o 5º lugar, é possível classificar pela quantidade ou pelo valor total de vendas do produto. <br><br>
-• Há terceira tela é a de alteração, onde é possível constatar os dados do pedido, além de alterar o nome, email e cpf cadastrados do pedido referente. Após salvar as alterações, elas são salvas localmente com o Context API, e os são exibidas na tela principal dos pedidos. 
+• Há terceira tela é a de alteração, onde é possível constatar os dados do pedido, além de alterar o nome, email e cpf cadastrados do pedido referente. Após salvar as alterações, elas são armazenadas localmente com o Context API, e as mudanças são exibidas na tela principal de pedidos. 
 
 
 ## Inicie o projeto no modo desenvolvedor
