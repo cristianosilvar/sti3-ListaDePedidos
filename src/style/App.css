@@ -73,11 +73,7 @@ h6, .h6 {font-size: .625rem;}
 .text-center {text-align: center;}
 .text-right {text-align: right;}
 
-
-/*  */
-
 .App {
     width: clamp(400px, 96%, 1440px);
     margin-inline: auto;
-    /* padding: 0 var(--space-6); */
 }

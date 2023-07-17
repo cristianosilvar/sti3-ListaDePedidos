@@ -1,9 +1,11 @@
 import './style/BestSellers.css'
 
+import spinner from '../../assets/spinner.svg'
+
 import useProducts from '../../hooks/useProducts'
+import { useEffect, useState } from 'react'
 
 import { useOrdersValue } from '../../context/OrdersContext'
-import { useEffect, useState } from 'react'
 
 export default function BestSellers() {
 
@@ -23,7 +25,7 @@ export default function BestSellers() {
         if (type === 'value') {   
             produtos.sort(function(a, b) {
             if(a.valorTotal > b.valorTotal) { 
-                // Se o a for maior que b retorna -1 e muda a posição
+                // Se o 'a' for maior que 'b' retorna -1 e muda a posição
                 return -1
             } else {
                 // Caso contrário continua em sua posição
@@ -36,10 +38,11 @@ export default function BestSellers() {
             setTop3(produtos[2])
             setTop4(produtos[3])
             setTop5(produtos[4])
+
         } else {   
             produtos.sort(function(a, b) {
            if(a.quantidade > b.quantidade) { 
-               // Se o a for maior que b retorna -1 e muda a posição
+               // Se o 'a' for maior que 'b' retorna -1 e muda a posição
                return -1
            } else {
                // Caso contrário continua em sua posição
@@ -52,6 +55,7 @@ export default function BestSellers() {
            setTop3(produtos[2])
            setTop4(produtos[3])
            setTop5(produtos[4])
+
         }
     },[type])
 
@@ -59,7 +63,7 @@ export default function BestSellers() {
     return (
         <div id="best-sellers">
             {
-                orders &&
+                orders && !loading &&
                 <>
                     <div className="type">
                         <h4 className='fw-normal'>Classificar Por:  </h4>
@@ -71,37 +75,44 @@ export default function BestSellers() {
                     <div className="cards">    
                         <div className="card card-yellow text-center">
                             <span className='h2 fw-normal'>1º</span>
-                            <span className='h3'>{top1.nome}</span>
-                            <span className='h5'>Vendido {top1.quantidade} vezes</span>
-                            <span className='h5'>Resultou em R$ {parseFloat(top1.valorTotal).toFixed(2).replace('.',',')}</span>
+                            <span className='h3'>{top1 ? top1.nome : ''}</span>
+                            <span className='h5'>Vendido {top1 ? top1.quantidade : ''} vezes</span>
+                            <span className='h5'>Resultou em R$ {top1 ? parseFloat(top1.valorTotal).toFixed(2).replace('.',',') : ''}</span>
                         </div>
                         <div className="card card-blue text-center">
                             <span className='h2 fw-normal'>2º</span>
-                            <span className='h3'>{top2.nome}</span>
-                            <span className='h5'>Vendido {top2.quantidade} vezes</span>
-                            <span className='h5'>Resultou em R$ {parseFloat(top2.valorTotal).toFixed(2).replace('.',',')}</span>
+                            <span className='h3'>{top2 ? top2.nome : ''}</span>
+                            <span className='h5'>Vendido {top2 ? top2.quantidade : ''} vezes</span>
+                            <span className='h5'>Resultou em R$ {top2 ? parseFloat(top2.valorTotal).toFixed(2).replace('.',',') : ''}</span>
                         </div>
                         <div className="card card-orange text-center">
                             <span className='h2 fw-normal'>3º</span>
-                            <span className='h3'>{top3.nome}</span>
-                            <span className='h5'>Vendido {top3.quantidade} vezes</span>
-                            <span className='h5'>Resultou em R$ {parseFloat(top3.valorTotal).toFixed(2).replace('.',',')}</span>
+                            <span className='h3'>{top3 ? top3.nome : ''}</span>
+                            <span className='h5'>Vendido {top3 ? top3.quantidade : ''} vezes</span>
+                            <span className='h5'>Resultou em R$ {top3 ? parseFloat(top3.valorTotal).toFixed(2).replace('.',',') : ''}</span>
                         </div>
                         <div className="card card-gray text-center">
                             <span className='h2 fw-normal'>4º</span>
-                            <span className='h3'>{top4.nome}</span>
-                            <span className='h5'>Vendido {top4.quantidade} vezes</span>
-                            <span className='h5'>Resultou em R$ {parseFloat(top4.valorTotal).toFixed(2).replace('.',',')}</span>
+                            <span className='h3'>{top4 ? top4.nome : ''}</span>
+                            <span className='h5'>Vendido {top4 ? top4.quantidade : ''} vezes</span>
+                            <span className='h5'>Resultou em R$ {top4 ? parseFloat(top4.valorTotal).toFixed(2).replace('.',',') : ''}</span>
                         </div>
                         <div className="card card-gray text-center">
                             <span className='h2 fw-normal'>5º</span>
-                            <span className='h3'>{top5.nome}</span>
-                            <span className='h5'>Vendido {top5.quantidade} vezes</span>
-                            <span className='h5'>Resultou em R$ {parseFloat(top5.valorTotal).toFixed(2).replace('.',',')}</span>
+                            <span className='h3'>{top5 ? top5.nome : ''}</span>
+                            <span className='h5'>Vendido {top5 ? top5.quantidade : ''} vezes</span>
+                            <span className='h5'>Resultou em R$ {top5 ? parseFloat(top5.valorTotal).toFixed(2).replace('.',',') : ''}</span>
                         </div>
                     </div>
                     <div></div>
                 </>
+            }
+            {error && <h5>{error}</h5>}
+            {loading &&
+                <div className="loading">    
+                    <img src={spinner} alt="Carregando dados..." className='loading-image'/>
+                    <span className='h6'>Carregando</span>
+                </div>
             }
         </div>
     )

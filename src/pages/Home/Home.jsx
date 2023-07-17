@@ -1,17 +1,15 @@
 import './style/Home.css'
 
-import { BrowserRouter, Routes, NavLink, Route, useNavigate } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import { useState } from 'react'
 
-import useDate from '../../hooks/useDate'
 import Orders from '../Orders/Orders'
 import BestSellers from '../BestSellers/BestSellers'
 import { useOrdersValue } from '../../context/OrdersContext'
-import { useFetch, useReloadFetch } from '../../hooks/useFetch'
 
 export default function Home() {
     const [page,setPage] = useState('orders')
-
+    
     const {loading, setReload} = useOrdersValue()
 
     return (

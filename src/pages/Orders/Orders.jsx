@@ -1,16 +1,11 @@
 import './style/Orders.css'
 
-// Assets
 import iconApproved from '../../assets/icon-approved.svg'
 import iconCancel from '../../assets/icon-cancel.svg'
 import iconEdit from '../../assets/icon-edit.svg'
 import spinner from '../../assets/spinner.svg'
 
-// React router
 import { Link } from 'react-router-dom'
-
-// Hook
-import { useFetch } from '../../hooks/useFetch' 
 import { useOrdersValue } from '../../context/OrdersContext'
 
 export default function Orders() {

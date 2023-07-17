@@ -1,15 +1,10 @@
-// Styles
 import './style/Header.css'
 
-// Assets
 import Logo from '../../assets/sti3-logo.svg'
-
-// Hooks
 import useDate from '../../hooks/useDate'
 
-
 export default function Header() {
-
+  
   const {day, dayWeek, mounth} = useDate()
   
   return (

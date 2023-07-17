@@ -1,9 +1,7 @@
 import './style/Order.css';
 
-//hooks
 import { useEffect, useState } from 'react'
 
-// assets
 import spinner from '../../assets/spinner.svg'
 import cross from '../../assets/cross.svg'
 
@@ -33,7 +31,7 @@ export default function Order() {
     const [alertIsActived, setAlertIsActived] = useState(false)
     const [loadingButtons, setLoadingButtons] = useState(false)
     
-    // data formatação
+    // Data formatação
 
     const formatDate = (date) => {
         const dateA = date;
@@ -43,7 +41,7 @@ export default function Order() {
         return formatedDate
     }
 
-    // reais formatação
+    // Valor formatação
 
     const formatValue = (value) => {
         const valueA = parseFloat(value)
@@ -55,7 +53,6 @@ export default function Order() {
     const handleCancel = () => {
         Navigate('/')
     }
-
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -103,7 +100,6 @@ export default function Order() {
 
         editOrders(id, name, email, cpf)
 
-        // Animação de aparecer e esconder alerta
         setAlertIsActived(true)
         setTimeout(() => {
             setLoadingButtons(false)
@@ -111,16 +107,17 @@ export default function Order() {
         }, 2500)
     }
 
+    // Animação do alerta de sucesso
     
     useEffect(() => {
         if (document.getElementById('sucess') != null) {
-            if (alertIsActived === true) {
+            if (alertIsActived == true) {
                 document.getElementById('sucess').style = 'display: flex'
                 
                 setTimeout(() => {
                     document.getElementById('sucess').style = 'display: none'
                     setAlertIsActived(false)
-                }, 2500)
+                }, 2499)
             } else {
                 document.getElementById('sucess').style = 'display: none'
                 setAlertIsActived(false)
@@ -260,7 +257,6 @@ export default function Order() {
                             </svg>
                         </figure>
                     </div>
-
                 </main>
         }
         </section>

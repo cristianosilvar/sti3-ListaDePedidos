@@ -22,8 +22,7 @@
     border: none;
     border-bottom: 2px solid var(--blue-100);
     font-family: 'Lexend', sans-serif;
-    padding: var(--space-1);/* 
-    border-radius: var(--radius-sm); */
+    padding: var(--space-1);
 }
 
 .select_type:hover {
@@ -70,4 +69,32 @@
 .card-gray {
     background-color: var(--gray-100);
     color: var(--black);
+}
+.loading {
+    width: 100%;
+    padding: var(--space-8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+}
+
+.loading > span {
+    color: var(--blue-500);
+}
+
+@keyframes loading {
+    0% {rotate: 0deg;}
+    100% {rotate: 360deg;}
+}
+
+
+.loading-image {
+    animation-name: loading;
+    animation-duration: 1.5s;
+    animation-delay: initial;
+    animation-iteration-count: infinite;
+
+    width: clamp(45px ,5%, 72px);
 }
