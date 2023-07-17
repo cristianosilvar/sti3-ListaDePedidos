@@ -1,0 +1,11 @@
+.not_found {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.not_found > img {
+    width: clamp(300px, 30%, 500px);
+
+    margin-inline: auto;
+}
