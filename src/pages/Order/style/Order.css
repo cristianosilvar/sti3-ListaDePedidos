@@ -91,6 +91,13 @@ input {
     opacity: .5;
 }
 
+@keyframes animation_sucess {
+    0% {right: 0px; opacity: 0;}
+    25% {right: 20px; opacity: 1;}
+    75% {right: 20px; opacity: 1;}
+    100% {right: 0px; opacity: 0;}
+}
+
 .sucess {
     position: absolute;
     z-index: 1;
@@ -99,12 +106,19 @@ input {
 
     color: var(--white);
     background-color: var(--green-500);
-    padding: var(--space-4) 0;
+    padding: var(--space-4);
     
-    display: flex;
+    display: none;
     flex-direction: row;
+    gap: var(--space-3);
 
     width: clamp(350px, 25%, 600px);
+
+    animation-name: animation_sucess;
+    animation-duration: 2500ms;
+    animation-delay: initial;
+    animation-fill-mode: forwards;
+
 }
 
 .sucess > div {
