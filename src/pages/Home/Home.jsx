@@ -12,7 +12,7 @@ import { useFetch, useReloadFetch } from '../../hooks/useFetch'
 export default function Home() {
     const [page,setPage] = useState('orders')
 
-    const {setReload} = useOrdersValue()
+    const {loading, setReload} = useOrdersValue()
 
     return (
         <section>
@@ -24,7 +24,13 @@ export default function Home() {
                         <h1>Listagem de pedidos</h1>
                         <h3 className='fw-normal'>Aqui você poderá visualizar todos os pedidos emitidos.</h3>
                     </div>
-                    <button className='button-consult fw-medium' onClick={() => setReload(true)}>Consultar</button>
+                    {
+                        loading ? (
+                            <button className='button-consult fw-medium' disabled>Consultar</button>
+                        ) : (
+                            <button className='button-consult fw-medium' onClick={() => setReload(true)}>Consultar</button>
+                        )
+                    }
                 </div>
                 <div className='navBar'>
                     <NavLink 

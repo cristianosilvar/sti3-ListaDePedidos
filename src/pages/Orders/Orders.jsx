@@ -34,7 +34,7 @@ export default function Orders() {
                 {
                     !loading && orders && 
                     orders.map((order) =>
-                    <tr key={order.id}>
+                    <tr key={orders.id}>
 
                         {
                             order.status === 'APROVADO' ? (

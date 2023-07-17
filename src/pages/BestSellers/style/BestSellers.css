@@ -1,5 +1,6 @@
 #best-sellers {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: var(--space-4);
 
@@ -7,6 +8,39 @@
     background-color: var(--white);
     border-bottom-right-radius: var(--radius-md);
     border-bottom-left-radius: var(--radius-md);
+}
+
+.type {
+    display: flex;
+    gap: var(--space-2);
+    align-items: center;
+}
+
+.select_type {
+    -webkit-appearance: none;
+    background-color: #ffffff00;
+    border: none;
+    border-bottom: 2px solid var(--blue-100);
+    font-family: 'Lexend', sans-serif;
+    padding: var(--space-1);/* 
+    border-radius: var(--radius-sm); */
+}
+
+.select_type:hover {
+    cursor: pointer;
+    border-bottom: 2px solid var(--blue-500);
+}
+
+.select_type::before {
+    content: '>';
+    color: black;
+    background-color: violet;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
 }
 
 .card {

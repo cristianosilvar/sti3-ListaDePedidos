@@ -30,6 +30,45 @@ export const useFetch = (reload, setReload) => {
         fetchData()
 
     }, [url, reload])
+    /* 
+    const agora = (id, name, email, cpf) => {
+        setData(null)
+        
+        data.map((order) => {
+            if (order.id == id) {
+
+                let orderEdited = {}
+
+                orderEdited = {
+                    "id": id,
+                    "numero": order.numero,
+                    "dataCriacao": order.dataCriacao,
+                    "dataAlteracao": order.dataAlteracao,
+                    "status": order.status,
+                    "desconto": order.desconto,
+                    "frete": order.frete,
+                    "subTotal": order.subTotal,
+                    "valorTotal": order.valorTotal,
+                    "cliente": {
+                        "id": order.cliente.id,
+                        "cnpj": order.cliente.cnpj,
+                        "cpf": cpf,
+                        "nome": name,
+                        "razaoSocial": order.cliente.razaoSocial,
+                        "email": email,
+                        "dataNascimento": order.cliente.dataNascimento
+                    },
+                    "enderecoEntrega": order.enderecoEntrega,
+                    "itens": order.itens,
+                    "pagamento": order.pagamento
+                }
+
+                setData([...data, orderEdited])
+            } else {
+                setData([...data, order])
+            }
+        })
+    } */
 
     return {data, loading, error}
 }

@@ -11,7 +11,7 @@ import { useOrdersValue } from '../../context/OrdersContext';
 import { useNavigate, useParams } from 'react-router-dom';
 
 export default function Order() {
-    const {orders, loading, error} = useOrdersValue()
+    const {orders, setOrders, loading, error} = useOrdersValue()
     const { id } = useParams()
 
     const Navigate = useNavigate()
@@ -60,6 +60,48 @@ export default function Order() {
     const handleSubmit = (e) => {
         e.preventDefault()
         setLoadingButtons(true)
+
+        const editOrders = (id, name, email, cpf) => {
+            
+            let orderEdited = {}
+            let array = []
+
+            orders.map((order) => {
+                if (order.id == id) {
+                    orderEdited = {
+                        "id": order.id,
+                        "numero": order.numero,
+                        "dataCriacao": order.dataCriacao,
+                        "dataAlteracao": order.dataAlteracao,
+                        "status": order.status,
+                        "desconto": order.desconto,
+                        "frete": order.frete,
+                        "subTotal": order.subTotal,
+                        "valorTotal": order.valorTotal,
+                        "cliente": {
+                            "id": order.cliente.id,
+                            "cnpj": order.cliente.cnpj,
+                            "cpf": cpf,
+                            "nome": name,
+                            "razaoSocial": order.cliente.razaoSocial,
+                            "email": email,
+                            "dataNascimento": order.cliente.dataNascimento
+                        },
+                        "enderecoEntrega": order.enderecoEntrega,
+                        "itens": order.itens,
+                        "pagamento": order.pagamento
+                    }
+    
+                    array = [...array, orderEdited]
+                } else {
+                    array = [...array, order]
+                }
+            })
+
+            setOrders(array)
+        }
+
+        editOrders(id, name, email, cpf)
 
         // Animação de aparecer e esconder alerta
         setAlertIsActived(true)
@@ -198,6 +240,7 @@ export default function Order() {
                                 value={cpf} 
                                 autoComplete='off'
                                 onChange={(e) => setCpf(e.target.value)}/>
+                                
                             </label>
                         </form>
                     </div>

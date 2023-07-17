@@ -1,4 +1,4 @@
-import { useContext, createContext } from "react";
+import { useContext, createContext, useEffect } from "react";
 import { useState } from "react";
 
 import { useFetch } from "../hooks/useFetch";
@@ -8,9 +8,14 @@ const OrdersContext = createContext()
 export function OrdersProvider ({children}) {
     
     const [reload, setReload] = useState(false)
-    const {data: orders, loading, error} = useFetch(reload, setReload)
+    const {data, loading, error} = useFetch(reload, setReload)
+    const [orders, setOrders] = useState(null)
 
-    return <OrdersContext.Provider value={{orders, loading, error, reload, setReload}}>{children}</OrdersContext.Provider>
+    useEffect(() => {
+        setOrders(data)
+    }, [reload, data])
+
+    return <OrdersContext.Provider value={{orders, setOrders, loading, error, reload, setReload}}>{children}</OrdersContext.Provider>
 }
 
 export function useOrdersValue() {
