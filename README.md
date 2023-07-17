@@ -1,15 +1,23 @@
 # Projeto Front End - STI3
 
+## Sobre
+
+• O projeto consiste em uma aplicação que consome uma API e o retorno será uma lista de pedidos. <br><br>
+• Na tela principal é exibido os dados sobre os pedidos, como: status, nome do cliente, valores e a opção de alterar alguns desses dados. <br><br>
+• Na tela 'Produtos Mais Vendidos' por sua vez é exibido a classificação de cada produto em uma colocação do 1º até o 5º lugar, é possível classificar pela quantidade ou pelo valor total de vendas do produto. <br><br>
+• Há terceira tela é a de alteração, onde é possível constatar os dados do pedido, além de alterar o nome, email e cpf cadastrados do pedido referente. Após salvar as alterações, elas são salvas localmente com o Context API, e os são exibidas na tela principal dos pedidos. 
+
+
 ## Inicie o projeto no modo desenvolvedor
-Abra o terminal no VS Code e execute os seguintes comandos:
+### Abra o terminal (CTRL + ') no VS Code e execute os comandos:
 
-### Para baixar as dependências:
 ### `npm install`
+#### Para baixar as dependências
 
-### Executar o projeto:
 ### `npm start`
+#### Para executar o projeto localmente
 
-#### Ele será aberto em [http://localhost:3000](http://localhost:3000) no seu navegador.
+### Ele será aberto em [http://localhost:3000](http://localhost:3000) no seu navegador.
 
 ## Design 
 
@@ -26,9 +34,8 @@ Abra o terminal no VS Code e execute os seguintes comandos:
 
 ![image](https://github.com/cristianosilvar/sti3-ListaDePedidos/assets/94191704/db9ae8dc-81d8-419c-8e16-708bfde1427d)
 
-### Gravação
+![video_projeto_sti3](https://github.com/cristianosilvar/sti3-ListaDePedidos/assets/94191704/57824322-8192-418b-8af8-ba0c4dd07944)
 
-![video_projeto_sti3](https://github.com/cristianosilvar/sti3-ListaDePedidos/assets/94191704/ff72c702-3dca-4cbe-9561-72709a5eb360)
 
 
 
