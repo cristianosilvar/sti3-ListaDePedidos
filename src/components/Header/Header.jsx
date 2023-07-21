@@ -19,6 +19,7 @@ export default function Header() {
         alignItems='center'>
           <Image src={Logo} alt='Logotipo da STI3'/>
           <div className={style.divider}></div>
+          
           <Text 
           fontSize='1.125rem' 
           fontWeight='600'>
